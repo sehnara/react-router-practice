@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useHistory } from 'react-router';
+import _with from './with';
 
 const Home = (props) => {
   const history = useHistory();
@@ -29,6 +30,7 @@ const Home = (props) => {
         <hr />
         <button onClick={goBack}>뒤로가기</button>
         <button onClick={goForward}>앞으로가기</button>
+        <_with/>
       </>
   );
 };
