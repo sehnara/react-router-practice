@@ -16,9 +16,7 @@ const About = (props) => {
     const history = useHistory();
     const {userName} = useParams();
     const profile = profileData[userName];
-    if(!profile){
-        return <div>존재하지 않는 유저입니다.</div>
-    }
+  
     
     const handleClick =()=>{
         history.push("/home");
@@ -27,9 +25,12 @@ const About = (props) => {
         <>
             <h1>About</h1>
             <button onClick={handleClick}>go to home</button>
-
-            <h3>{userName} {profile.name}</h3>
-            <p>{profile.desc}</p>
+            {profile&&
+              <>
+                <h3>{userName} {profile.name}</h3>
+                <p>{profile.desc}</p>
+              </>
+            }
         </>
     );
 };

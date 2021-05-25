@@ -18,17 +18,10 @@ function App() {
       </div> 
 
       <Switch>
-        <Route exact path={['/home', '/']}>
-          <Home/>
-        </Route>
-        <Route path="/about/:userName">
-          <About />
-        </Route>
-        <Route 
-          path="/users"          
-        >
-          <Users/>
-        </Route>       
+        <Route exact path={['/home', '/']} component ={Home} />
+        <Route path="/about/:userName" component ={About} />
+        <Route path="/about" component ={About} />
+        <Route path="/users" component ={Users} />                >
       </Switch> 
     </BrowserRouter>
   );
