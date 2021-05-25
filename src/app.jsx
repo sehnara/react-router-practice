@@ -24,7 +24,9 @@ function App() {
         <Route path="/about/:userName">
           <About />
         </Route>
-        <Route path="/users">
+        <Route 
+          path="/users"          
+        >
           <Users/>
         </Route>       
       </Switch> 
