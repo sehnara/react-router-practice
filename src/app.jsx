@@ -21,7 +21,7 @@ function App() {
         <Route exact path={['/home', '/']}>
           <Home/>
         </Route>
-        <Route path="/about">
+        <Route path="/about/:userName">
           <About />
         </Route>
         <Route path="/users">
